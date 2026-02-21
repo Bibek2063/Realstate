@@ -165,7 +165,10 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
+    chunkSizeWarningLimit: 2000 // 2000 KB = 2 MB
+
   },
+  
   server: {
     port: 3000,
     strictPort: false, // Will find next available port if 3000 is busy
